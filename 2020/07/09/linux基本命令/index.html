@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><link rel="stylesheet" type="text/css" href="//fonts.loli.net/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/css/style.css?v=2.0.5"><link rel="stylesheet" type="text/css" href="/css/highlight.css?v=2.0.5"><link rel="Shortcut Icon" href="/favicon.ico"><link rel="bookmark" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><title>linux基本命令 | Hexo</title><meta name="generator" content="Hexo 4.2.1"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">linux基本命令</h1><a id="logo" href="/.">Hexo</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="search"></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><h1 class="post-title">linux基本命令</h1><div class="post-meta"><a href="/2020/07/09/linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/#comments" class="comment-count"></a><p><span class="date">Jul 09, 2020</span><span><i id="busuanzi_container_page_pv"><i id="busuanzi_value_page_pv"></i><i>Hits</i></i></span></p></div><div class="post-content"><h1 id="linux基本命令"><a href="#linux基本命令" class="headerlink" title="[linux基本命令]"></a>[linux基本命令]</h1><p>VMware隔离Windows和Linux、Centos.iso–Linux安装包、生成Linux操作系统。</p>
+<p>虚拟机：</p>
+<p>当前linux包含：centos，redhat(红帽子)，Ubuntu</p>
+<p>linux工作中的用处： </p>
+<p>1、搭建测试环境</p>
+<p>2、log日志排查问题（开发会将开发步骤写入日志，当其中一步出错进行不到下一步时，测试截出与开发一起解决）</p>
+<p>软件bug: 安装过的软件， 还可以安装</p>
+<p>3、Xshell：链接Linux系统的客户端：需要ip地址 端口号 Linux系统的用户名 ,密码</p>
+<p>4、navicat：链接数据库的客户端</p>
+<p>连接数据库需要：ip 地址 数据库的端口号 数据库的用户名，密码</p>
+<p>查看电脑IP：有线网看以太网、无线网看无线局域网。</p>
+<p>Linux命令=shell命令</p>
+<p>Linux</p>
+<p>1、ls –查看当前所在的位置下有哪些文件和文件夹</p>
+<p>  -a显示所有文件，包括隐藏文件（ls -a隐藏文件是白色）</p>
+<p>  -l使用长格式显示  ls -l == ll （查看d开头是目录，没有d是文件。查看权限）</p>
+<p>  -F附加文件类别，符号在文件名最后</p>
+<p>  -R陆续显示目录</p>
+<p> -d列出指定的目录</p>
+<p>2、【root@192 <del>】root–登录的用户名、192–主机名、</del>当前目录名称</p>
+<p> <img src="https://img2020.cnblogs.com/blog/1976605/202005/1976605-20200519161047165-1330642013.png" alt="img"></p>
+<p>3、绝对路径—两个没有关联的路径切换</p>
+<p>4、相对路径—有关联的</p>
+<p>5、父目录切子目录—cd 子目录名</p>
+<p>6、 cd ..子目录去父目录  cd ../ yan切换到上一层目录的yan目录</p>
+<p>7、Pwd—显示当前路径 </p>
+<p>8、家目录：root登录家目录在/root（管路员家目录），普通用户在/home/用户名  （以什么用户登录，就在此家目录下）  </p>
+<p>9、cd回车—切换到家目录下</p>
+<p>10、mkdir—建文件夹</p>
+<p>11、touch—建文件</p>
+<p>12、rm—删除（rm -rf强制删除，不提示确定删除）</p>
+<p>13、man ls 查看ls指令的帮助信息（ctrl+z退出man）</p>
+<p>14、cp -pr [源文件或目录路径] [目的文件或目录的路径]</p>
+<p> cp 默认为cp -i（-i为提示名字重复，是否覆盖）如果想不提示直接覆盖同名文件 /cp</p>
+<p>15、复制当前目录到别的地方（cp -r . 粘贴的路径）</p>
+<p>16、-p保留原文件的日期属性、-r递归复制所有文件、- f 若目的地已经有相同名字的档案存在，则在复制前先予以删除再行复制而不提示。</p>
+<p>17、移动/剪切：mv 【源文件路径】 【目的文件路径】。</p>
+<p>改名：mv 原文件名 更改的文件名</p>
+<p>18、Rz、—将windows的文件传到linux。Sz—将linux的文件传到windows</p>
+<p>传输后查看文件内容：cat 文件名（内容全部显示在屏幕上，如果内容太多，只能看最后一些内容）；more 文件名，只能向下翻页。Less 文件名 上下都能翻（b向上翻页，f向下翻页）；</p>
+<p>19、查看前后几行（看前后n行,-f实时更新。不加行数，默认10行）：①head -f -n 文件名②tail -f -n 文件名</p>
+<p>Ctrl+Z退出</p>
+<p>20、vi 文件名—-查看文件内容、i—编辑文件、esc退出编辑、shift+：wq! 强制保存、shift+：q! 强制不保存退出、shift+：q 不保存退出。</p>
+<p>21、查找文件里一些内容：①vi文件路径—-/需要的内容 ②grep 需要内容 文件路径</p>
+<p>22、grep 查找内容 文件路径 -C  n行数 –color=auto  （查找文件内容加色，并把上下n行显示出来）</p>
+<p>23、①在vi在替换内容:%s/需要改的内容/修改后的内容/g（文件里需要修改的内容全部修改）eg:  :%s/hello/world/g—把hello全部改成world  ②直接替换内容sed  -i  s/hello/world/g  t1.txt —-把t1.txt里的hello改成world</p>
+<p>24、wc统计  -c字节  -w字数  -l行数</p>
+<p>25、ll查看后 创建者权限、组员权限、其他权限 创建人名、组名 创建日期</p>
+<p>26、权限：4 r、2 w、1 x</p>
+<p>  读写执行7=4+2+1、读写 6=4+2、读执行 5=4+1、写执行 3=2+1</p>
+<p>  用户：u创建者、g组员、o其他</p>
+<p>27、chmod u+w 文件名 文件给用户加上写的权限</p>
+<p>28、chmod g-r 文件名 文件给组员减去读取权限</p>
+<p>29、chmod o+x 文件名  文件给其他加上执行权限</p>
+<p>30、chmod -R 权限 父目录 （修改父目录及所有子目录的权限）</p>
+<p>每建一个用户，就默认生成与用户名相同的组</p>
+<p>31、su 用户名 切换用户</p>
+<p>32、chown -R 用户名 文件名（修改文件及所有子目录所有者u）</p>
+<p>33、chgrp -R 组名 文件名 （修改文件及所有子目录所属组g）</p>
+<p>34、groups 用户名 查看用户的所属组</p>
+<p>35、usermod -a -G 组名 用户名  将用户拉到组里</p>
+<p>36、find 路径 -name  “<em>.t?t” （</em>同数据库里的% 匹配多个字符、？同数据库_匹配一个字符）</p>
+<p>37、管道符：ll|wc -l （统计ll查找下有多少行）</p>
+<p>  ①取文件的10到20行，先取前20行，再取这20行的后11行 head -20 t1.txt|tail -11  ②统计文件中的某个内容 出现多少次。 先把需求内容找出来，每个一行再统计有多少行（grep -o 需要内容 文件名|wc -l）</p>
+<p>38、clear清除屏幕、 history查看历史代码记录</p>
+<p>39、创建用户：adduser 用户名 </p>
+<p>  修改用户名：usermod -l 新用户名 老用户名</p>
+<p>设置（修改）密码：passwd 用户名</p>
+<p>删除用户：userdel （-r 删除用户目录） 用户名</p>
+<p>40、查看用户信息cat /etc/passwd、</p>
+<p>查看密码信息cat /etc/shadow</p>
+<p>41、查看系统进程与内存：win—任务管理器/性能</p>
+<p>​         Linux—top -d 1（每隔1s刷新状态信息）</p>
+<p>   Ctrl+Z退出刷新状态信息</p>
+<p>42、结束系统进程：win—任务管理器右键结束</p>
+<p>Linux—-kill -9 进程号</p>
+<p>43、功能描述：查看系统中运行的进程。</p>
+<p>44、范例：# ps -aef</p>
+<p># ps -A 查看所有进程，和ps -e功能相同</p>
+<p>查看进程的某一行内容 ps–ef|grep需要内容</p>
+<p>45、查看系统信息：uname -ra</p>
+<p>​    -r  显示操作系统发布版本</p>
+<p>-a  显示系统所有标示信息</p>
+<p>46、IP访问电脑、IP+端口号这台电脑的不同应用</p>
+<p>47、启动程序：sh 文件名</p>
+<p>48、查看端口状态（通过进程编号查看应用所占的端口号）：netstat -tnlup、ps -ef|grep 文件名、netstat -tnlup|grep 进程编号</p>
+<p>49、压缩包—-①tar压缩：tar -zcvf 压缩包名 要压缩文件名</p>
+<p>​        tar解压：tar -zxvf 解压文件名</p>
+<p>​      ②zip压缩：zip -r 压缩包名 要压缩文件名</p>
+<p>​        zip解压：unzip 压缩包名 -d 压缩到的路径</p>
+<p>50、df命令–功能：检查文件系统的磁盘空间占用情况</p>
+<p>df -ah</p>
+<p>​     -a 显示所有文件系统的磁盘使用情况，包括0块（block）的文件系统，如/proc文件系统。</p>
+<p>​     -k 以k字节为单位显示。</p>
+<p>​     -h 以可读性较好的方式显示。</p>
+<p>​     -T 显示文件系统类型。</p>
+<p>51、du (disk usage)命令–功能：统计目录（或文件）所占磁盘空间的大小   </p>
+<p>​    du -sh 文件路径—-显示某个文件所占空间</p>
+<p>​    du -ah 文件路径—-</p>
+<p>52、Linux安装：yum -y install 安装包名</p>
+</div><div class="post-copyright"><blockquote><p>Original author: John Doe</p><p>Original link: <a href="http://yoursite.com/2020/07/09/linux基本命令/">http://yoursite.com/2020/07/09/linux基本命令/</a></p><p>Copyright Notice: Please indicate the source of the reprint (must retain the author's signature and link)</p></blockquote></div><div class="tags"></div><div class="post-share"><div class="social-share"><span>Share:</span></div></div><div class="post-nav"><a href="/2020/07/09/Bootstrap%E5%B7%B2%E5%AE%8C%E6%88%90/" class="pre">Bootstrap已完成</a><a href="/2020/07/09/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/" class="next">存储引擎</a></div><div id="comments"></div></div></div></div><div class="layout-r"><div id="sidebar"><div class="search-pla"></div><div id="toc" class="widget"><div class="widget-title"><i class="fa fa-fei">Contents</i></div><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#linux基本命令"><span class="toc-text">[linux基本命令]</span></a></li></ol></div><div class="widget"><div class="widget-title"><i class="fa fa-xie"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/csrf%20%E8%B7%A8%E7%AB%99%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0/">csrf 跨站请求伪造</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/%E5%89%8D%E7%AB%AF%E4%B9%8BCSS/">前端之CSS</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/%E8%B7%AF%E7%94%B1%E5%92%8C%E8%AE%A4%E8%AF%81/">路由和认证</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/%E5%BA%8F%E5%88%97%E5%8C%96%E7%BB%84%E4%BB%B6/">序列化组件</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94/">请求和响应</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/DRF%20CBV%E5%92%8CAPIView%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/">DRF CBV和APIView源码解读</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/cookie%20%E5%92%8Csession/">cookie 和session</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/Bootstrap%E5%B7%B2%E5%AE%8C%E6%88%90/">Bootstrap已完成</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">linux基本命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/">存储引擎</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> Tags</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-archive"> Archive</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">15</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-you"> Blogroll</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div></div><a id="totop" href="#top"></a><div id="footer"><div class="footer-info"><p><a href="/baidusitemap.xml">Site Map</a> |  <a href="/atom.xml">Subscribe to this site</a> |  <a href="/about/">Contact the blogger</a></p><p>本站总访问量：<i id="busuanzi_container_site_pv"><i id="busuanzi_value_site_pv"></i></i>次，本站总访客数:<i id="busuanzi_container_site_uv"><i id="busuanzi_value_site_uv"></i></i>人</p><p><span> Copyright &copy;<a href="/." rel="nofollow">John Doe.</a></span><span> Theme by<a rel="nofollow" target="_blank" href="https://github.com/chaooo/hexo-theme-BlueLake"> BlueLake.</a></span><span> Count by<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener"> busuanzi.</a></span><span> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></span></p></div></div></div><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script type="text/javascript" src="/js/search.json.js?v=2.0.5"></script><div id="fullscreen-img" class="hide"><span class="close"></span></div><script type="text/javascript" src="/js/imgview.js?v=2.0.5" async></script><script type="text/javascript" src="/js/toctotop.js?v=2.0.5" async></script><link rel="stylesheet" type="text/css" href="/share/css/share.css"><script type="text/javascript" src="/share/js/social-share.js" charset="utf-8"></script><script type="text/javascript" src="/share/js/qrcode.js" charset="utf-8"></script></body></html>
