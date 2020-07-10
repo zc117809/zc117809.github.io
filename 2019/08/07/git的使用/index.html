@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><link rel="stylesheet" type="text/css" href="//fonts.loli.net/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/css/style.css?v=2.0.5"><link rel="stylesheet" type="text/css" href="/css/highlight.css?v=2.0.5"><link rel="Shortcut Icon" href="/favicon.ico"><link rel="bookmark" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><title>魔法方法 | Hexo</title><meta name="generator" content="Hexo 4.2.1"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">魔法方法</h1><a id="logo" href="/.">Hexo</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="search"></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><h1 class="post-title">魔法方法</h1><div class="post-meta"><a href="/2019/08/07/git%E7%9A%84%E4%BD%BF%E7%94%A8/#comments" class="comment-count"></a><p><span class="date">Aug 07, 2019</span><span><i id="busuanzi_container_page_pv"><i id="busuanzi_value_page_pv"></i><i>Hits</i></i></span></p></div><div class="post-content"><h2 id="git的使用"><a href="#git的使用" class="headerlink" title="git的使用"></a>git的使用</h2><h2 id="git和github-的区别"><a href="#git和github-的区别" class="headerlink" title="git和github 的区别"></a>git和github 的区别</h2><ul>
+<li>Git 是一种方法。而 GitHub 只是使用这种方法的一个代码仓库，就是git是操作的，GitHub是个网址</li>
+</ul>
+<h2 id="初始化git仓储"><a href="#初始化git仓储" class="headerlink" title="初始化git仓储"></a>初始化git仓储</h2><p>新建一个项目project，点进目录右击选择<strong>git bash</strong></p>
+<p><img src="C:%5CUsers%5C%E5%B0%8F%E5%AD%90%5CDesktop%5C1589027002(1).jpg" alt="1589027002(1)"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init <span class="comment"># 初始化仓库，这个git对我们项目的代码进行备份</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>配置用户名和邮箱</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="keyword">global</span>   user.name <span class="string">"xiaoming"</span> <span class="comment"># 用户名</span></span><br><span class="line"></span><br><span class="line">git config --<span class="keyword">global</span> user.email  <span class="string">"xx@sina.com"</span> <span class="comment"># 邮箱</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>把代码存储到 git 仓储中</strong></p>
+<ul>
+<li><p><strong>分两步走：</strong></p>
+<ul>
+<li><p>把代码放到<code>.git</code>隐藏目录的大门(暂存区)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add ./readme.md <span class="comment"># ./readme.md 文件路径要说明</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>把门口的代码放入房间里面</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"这是对这次添加东西的说明"</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>区域划分：</strong></p>
+<ul>
+<li><strong>工作区</strong>：就是你在电脑里能看到的目录，比如我的learngit文件夹就是一个工作区。</li>
+<li><strong>版本库</strong>：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。</li>
+<li><strong>暂存区</strong>：Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master。</li>
+</ul>
+<p><strong>查询当前所处的工作状态</strong>：<code>git status</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">On branch master</span><br><span class="line">nothing to commit, working tree clean</span><br><span class="line"><span class="comment"># 我们提交完了，当前的工作区是干净的</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(use <span class="string">"git add &lt;file&gt;..."</span> to update what will be committed)</span><br><span class="line">  (use <span class="string">"git checkout -- &lt;file&gt;..."</span> to discard changes <span class="keyword">in</span> working directory)</span><br><span class="line"></span><br><span class="line">	modified:   readme.txt</span><br><span class="line"><span class="comment"># 把文件放在了暂存区</span></span><br><span class="line"></span><br><span class="line">(use <span class="string">"git add &lt;file&gt;..."</span> to update what will be committed)</span><br><span class="line">(use <span class="string">"git checkout -- &lt;file&gt;..."</span> to discard changes <span class="keyword">in</span> working directory)</span><br><span class="line"></span><br><span class="line">	modified:   readme.txt</span><br><span class="line"><span class="comment"># 我们的文件修改了，但是没有放到暂存区(大门口)</span></span><br></pre></td></tr></table></figure>
+
+<p>如果我们修改了两个文件是不是要add两次命令呢，不需要</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add ./ <span class="comment"># 当前目录只要是修改过的文件都放到暂存区</span></span><br></pre></td></tr></table></figure>
+<p>一次性把我们修改的代码放到房子里面去</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --all -m <span class="string">"一些说明"</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>查看日志</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git log <span class="comment"># 查看历史提交的日志</span></span><br><span class="line">git log --oneline <span class="comment"># 简洁版的日志</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>git 版本回退</strong></p>
+<p>先用日志功能查看我们修改过的功能，在选择回退的版本</p>
+<p>修改过后的版本日志</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git log --oneline</span><br><span class="line">489310a (HEAD -&gt; master) 添加了js和一个功能</span><br><span class="line"><span class="number">01</span>ebf78 我们完成四个功能</span><br><span class="line"><span class="number">20e8</span>c3c 我们完成三个功能</span><br><span class="line">bc9c3b5 这次加了一个功能</span><br><span class="line"><span class="number">6</span>dad8ac 这是我的开始</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard Head~<span class="number">1</span>  <span class="comment"># 1 表示退回到上上次代码提交的状态</span></span><br><span class="line">						 <span class="comment"># 0 表示上一次</span></span><br></pre></td></tr></table></figure>
+
+<p>退回后的版本</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">01ebf78 (HEAD -&gt; master) 我们完成四个功能</span><br><span class="line"><span class="number">20e8</span>c3c 我们完成三个功能</span><br><span class="line">bc9c3b5 这次加了一个功能</span><br><span class="line"><span class="number">6</span>dad8ac 这是我的开始</span><br></pre></td></tr></table></figure>
+
+<p><strong>通过版本号回退</strong><br>查看日志</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git log --oneline</span><br><span class="line">489310a (HEAD -&gt; master) 添加了js和一个功能</span><br><span class="line"><span class="number">01</span>ebf78 我们完成四个功能 <span class="comment"># 01ebf78版本号</span></span><br><span class="line"><span class="number">20e8</span>c3c 我们完成三个功能 <span class="comment"># 20e8c3c版本号</span></span><br><span class="line">bc9c3b5 这次加了一个功能</span><br><span class="line"><span class="number">6</span>dad8ac 这是我的开始</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git -reset --hard <span class="number">01</span>ebf78 <span class="comment"># 精确的回退到某一次的提交状态</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">01ebf78 (HEAD -&gt; master) 我们完成四个功能</span><br><span class="line"><span class="number">20e8</span>c3c 我们完成三个功能</span><br><span class="line">bc9c3b5 这次加了一个功能</span><br><span class="line"><span class="number">6</span>dad8ac 这是我的开始</span><br></pre></td></tr></table></figure>
+
+<p>假如说我们退回之后又后悔之前的操作咋办呢？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git -reset --hard <span class="number">01</span>ebf78 <span class="comment"># 精确的回退到某一次的提交状态</span></span><br></pre></td></tr></table></figure>
+
+<p>但是如果我们把窗口关掉了，记不住版本号，又想回到以前的状态咋办呢</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reflog  <span class="comment"># 可以看到每一次切换的版本的记录，可以看到所有提交的版本号</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">01ebf78 (HEAD -&gt; master) HEAD@&#123;0&#125;: reset: moving to Head~1</span><br><span class="line"><span class="number">489310</span>a HEAD@&#123;<span class="number">1</span>&#125;: commit: 添加了js和一个功能</span><br><span class="line">01ebf78 (HEAD -&gt; master) HEAD@&#123;2&#125;: commit: 我们完成四个功能</span><br><span class="line"><span class="number">20e8</span>c3c HEAD@&#123;<span class="number">3</span>&#125;: commit: 我们完成三个功能</span><br><span class="line">bc9c3b5 HEAD@&#123;<span class="number">4</span>&#125;: commit: 这次加了一个功能</span><br><span class="line"><span class="number">6</span>dad8ac HEAD@&#123;<span class="number">5</span>&#125;: commit (initial): 这是我的开始</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><p><strong>主分支：默认的是master</strong></p>
+<p><strong>创建分支：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch dev <span class="comment"># 创建了一个dev分支 创建dev分支里面的东西和master分支的东西是一样的</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>切换分支：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout dev <span class="comment"># 切换到指定分支</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>查看分支：</strong> </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">$ git branch</span></span><br><span class="line"><span class="string">  dec</span></span><br><span class="line"><span class="string">  dev</span></span><br><span class="line"><span class="string">* master # 当前所在分支</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>合并分支：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge dev <span class="comment"># 指定分支的名称</span></span><br></pre></td></tr></table></figure>
+
+<p>比如我们我们创建分支，在分支里面已经完成了我们的功能五，但是当我们去切换到master的时候我们忘记在分支里面添加了功能五，又在master里完成了功能五，当我们去合并的时候会出现</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git merge dev</span><br><span class="line">Auto-merging readme.md</span><br><span class="line">CONFLICT (content): Merge conflict <span class="keyword">in</span> readme.md</span><br><span class="line">Automatic merge failed; fix conflicts <span class="keyword">and</span> then commit the result.</span><br></pre></td></tr></table></figure>
+
+<p>合并的时候如果有冲突，需要手动去处理，如何去处理呢，那就是要到你完成的功能里面去选择，处理完后还需要再提交一次。</p>
+<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><p><strong>提交代码到GitHub</strong>（当作git的服务器）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push [地址] master <span class="comment">#</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>拿到远程的代码</strong></p>
+<p>首先要建立一个新的仓储</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push https://github.com/zc117809/test112.git master</span><br></pre></td></tr></table></figure>
+
+<p><strong>克隆</strong></p>
+<p>要先建立一个文件，在文件里打开<strong>git bash</strong>输入</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/zc117809/test112.git</span><br></pre></td></tr></table></figure>
+
+<p>多次执行会覆盖本地的内容</p>
+<h3 id="ssh-方式上传代码"><a href="#ssh-方式上传代码" class="headerlink" title="ssh 方式上传代码"></a>ssh 方式上传代码</h3><p>有公钥和私钥，这两个是有关联的</p>
+<ul>
+<li><p>生成公钥和私钥</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -kegen -t rsa -c <span class="string">"邮箱"</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h2 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h2><p>小明和小红现在同时写作开发，小红在服务器上pull到小明的数据，pull完之后，小红在html文件上做了一个功能，备份到本地，这个时候小明又更新了版本，小红又去pull这个时候会出现冲突，小红新添加的功能会和小明更新的版本上出现错乱。</p>
+<p><strong>总结：</strong></p>
+<ul>
+<li>查看远程库信息，使用<code>git remote -v</code>；</li>
+<li>本地新建的分支如果不推送到远程，对其他人就是不可见的；</li>
+<li>从本地推送分支，使用<code>git push origin branch-name</code>，如果推送失败，先用<code>git pull</code>抓取远程的新提交；</li>
+<li>在本地创建和远程分支对应的分支，使用<code>git checkout -b branch-name origin/branch-name</code>，本地和远程分支的名称最好一致；</li>
+<li>建立本地分支和远程分支的关联，使用<code>git branch --set-upstream branch-name origin/branch-name</code>；</li>
+<li>从远程抓取分支，使用<code>git pull</code>，如果有冲突，要先处理冲突。</li>
+<li>解决完之后还要上传到服务器push</li>
+</ul>
+<p>当我们push时，加上-u参数，在下一次push时我们只需要写上<code>git push</code> 就能上传我们的代码(加上-u之后，git拉取当前我们分支与远程指定的分支进行关联，<code>git push origin master</code>)</p>
+</div><div class="post-copyright"><blockquote><p>Original author: John Doe</p><p>Original link: <a href="http://yoursite.com/2019/08/07/git的使用/">http://yoursite.com/2019/08/07/git的使用/</a></p><p>Copyright Notice: Please indicate the source of the reprint (must retain the author's signature and link)</p></blockquote></div><div class="tags"><a href="/tags/python/">python</a></div><div class="post-share"><div class="social-share"><span>Share:</span></div></div><div class="post-nav"><a href="/2019/08/07/%E9%AD%94%E6%B3%95%E6%96%B9%E6%B3%95/" class="pre">魔法方法</a></div><div id="comments"></div></div></div></div><div class="layout-r"><div id="sidebar"><div class="search-pla"></div><div id="toc" class="widget"><div class="widget-title"><i class="fa fa-fei">Contents</i></div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#git的使用"><span class="toc-text">git的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git和github-的区别"><span class="toc-text">git和github 的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化git仓储"><span class="toc-text">初始化git仓储</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分支管理"><span class="toc-text">分支管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#远程仓库"><span class="toc-text">远程仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ssh-方式上传代码"><span class="toc-text">ssh 方式上传代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多人协作"><span class="toc-text">多人协作</span></a></li></ol></div><div class="widget"><div class="widget-title"><i class="fa fa-xie"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/csrf%20%E8%B7%A8%E7%AB%99%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0/">csrf 跨站请求伪造</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/%E5%89%8D%E7%AB%AF%E4%B9%8BCSS/">前端之CSS</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/%E8%B7%AF%E7%94%B1%E5%92%8C%E8%AE%A4%E8%AF%81/">路由和认证</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/%E5%BA%8F%E5%88%97%E5%8C%96%E7%BB%84%E4%BB%B6/">序列化组件</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94/">请求和响应</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/DRF%20CBV%E5%92%8CAPIView%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/">DRF CBV和APIView源码解读</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/cookie%20%E5%92%8Csession/">cookie 和session</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">linux基本命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/">存储引擎</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/%E5%9F%BA%E4%BA%8Epython%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%A4%9A%E4%BA%BA%E8%81%8A%E5%A4%A9%E5%AE%A4/">基于python面向对象多人聊天室</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> Tags</i></div><div class="tagcloud"><a href="/tags/python/" style="font-size: 15px;">python</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-archive"> Archive</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">2</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-you"> Blogroll</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div></div><a id="totop" href="#top"></a><div id="footer"><div class="footer-info"><p><a href="/baidusitemap.xml">Site Map</a> |  <a href="/atom.xml">Subscribe to this site</a> |  <a href="/about/">Contact the blogger</a></p><p>本站总访问量：<i id="busuanzi_container_site_pv"><i id="busuanzi_value_site_pv"></i></i>次，本站总访客数:<i id="busuanzi_container_site_uv"><i id="busuanzi_value_site_uv"></i></i>人</p><p><span> Copyright &copy;<a href="/." rel="nofollow">John Doe.</a></span><span> Theme by<a rel="nofollow" target="_blank" href="https://github.com/chaooo/hexo-theme-BlueLake"> BlueLake.</a></span><span> Count by<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener"> busuanzi.</a></span><span> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></span></p></div></div></div><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script type="text/javascript" src="/js/search.json.js?v=2.0.5"></script><div id="fullscreen-img" class="hide"><span class="close"></span></div><script type="text/javascript" src="/js/imgview.js?v=2.0.5" async></script><script type="text/javascript" src="/js/toctotop.js?v=2.0.5" async></script><link rel="stylesheet" type="text/css" href="/share/css/share.css"><script type="text/javascript" src="/share/js/social-share.js" charset="utf-8"></script><script type="text/javascript" src="/share/js/qrcode.js" charset="utf-8"></script></body></html>
